@@ -14,6 +14,4 @@
  		console.log('disconnected from server');
  	});
 
- 	socket.on('new-msg', function(data) {
-           console.log(data);
- 	});
+ 

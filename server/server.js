@@ -22,13 +22,12 @@ io.on('connection',(socket)=>{
 
 		console.log(data);
 
-	});
+		io.emit('new-msg', {
 
-	socket.emit('new-msg', {
-
-		from :'Admin',
-		text:'HEllo',
-		createdAt: 1223
+			from: data.from,
+			text: data.text,
+			createdAt: new Date().getTime()
+		});
 
 	});
 
