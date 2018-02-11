@@ -18,6 +18,20 @@ io.on('connection',(socket)=>{
 
 	console.log('new user connected');
 
+	socket.on('create-msg', (data)=>{
+
+		console.log(data);
+
+	});
+
+	socket.emit('new-msg', {
+
+		from :'Admin',
+		text:'HEllo',
+		createdAt: 1223
+
+	});
+
 	socket.on('disconnect',()=>{
 		console.log('User Disconnected');
 
