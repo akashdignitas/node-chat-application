@@ -13,3 +13,17 @@
    	console.log(message);
 
    });
+
+
+   socket.on('new-user', function(message) {
+
+   	console.log(message);
+
+   });
+
+
+   socket.on('new-user-add', function(message) {
+
+   	console.log(message);
+
+   });
